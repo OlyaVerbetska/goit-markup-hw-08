@@ -1,0 +1,33 @@
+.logo--primary {
+  font-family: $font-logo;
+  @include font(700, 24px, 0.03em, 1.17);
+  color: $logo;
+}
+.logo__accent {
+      color: $accent-color;
+    }
+
+
+
+// .logo--primary {
+//   display: inline-block;
+
+//   padding: 24px 0 25px 0;
+//   margin-right: 93px;
+
+//   font-family: $font-logo;
+//   @include font (700, 26px, 0.03em, 1.19);
+
+//   color: $logo;
+// }
+// 
+// .logo--secondary {
+//   display: inline-block;
+
+//   margin-bottom: 20px;
+
+//   font-family: $font-logo;
+//   @include font (700, 26px, 0.03em, 1.19);
+
+//   color: $contrast-white-color;
+// }

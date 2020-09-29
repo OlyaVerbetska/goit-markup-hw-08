@@ -1,0 +1,33 @@
+@import "./base/fonts";
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/common";
+
+@import "./components/logo";
+@import "./components/navigation";
+@import "./components/contacts";
+@import "./components/button";
+@import "./components/socials";
+@import "./components/backdrop";
+@import "./components/modal";
+@import "./components/form-order";
+@import "./components/form-subscribe";
+@import "./components/filter";
+@import "./components/gallery";
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/features";
+@import "./layouts/work";
+@import "./layouts/team";
+@import "./layouts/clients";
+// @import "./layouts/footer";
+
+
+*,
+*::before,
+*::after {
+	outline: 1px solid tomato;
+}

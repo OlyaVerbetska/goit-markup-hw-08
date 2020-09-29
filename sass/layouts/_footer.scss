@@ -1,0 +1,51 @@
+// .footer {
+//   background-color: $bg-color-dark;
+// }
+// .footer .container {
+//   padding: 60px 15px;
+//   align-items: flex-start;
+//   justify-content: flex-end;
+// }
+
+// .footer__subtitle {
+//   @extend .subtitle;
+//   // display: block;
+//   margin-bottom: 20px;
+//   color: $contrast-white-color;
+//   width:100%;
+  
+// }
+// .footer__social {
+//   flex-direction: column;
+
+//   margin: 12px 93px 0 0;
+// }
+// .footer__nav {
+//   /* width: 250px; */
+//   margin-right: 70px;
+// }
+// .address__post {
+//   display: inline-block;
+//   margin-bottom: 9px;
+
+//   font-style: normal;
+//   @include font(400, 14px, 0.03em, 1.71);
+
+//   color: $contrast-white-color;
+// }
+
+// .address__link {
+//   @include font(400, 14px, 0.03em, 1.71);
+//   display: inline-block;
+//   margin-bottom: 9px;
+//   font-style: normal;
+//   color: $contrast-text-color;
+//   transition: color $tdur $ttf;
+//   &:not(:last-child) {
+//     margin-bottom: 9px;
+//   }
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }

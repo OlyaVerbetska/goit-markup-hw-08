@@ -1,0 +1,46 @@
+.socials__list {
+    display: flex;
+    justify-content: center;
+}
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+.socials__link {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color $tdur $ttf;
+
+  &:hover, &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.socials__icon--team {
+  fill: $border-clients;
+  transition: fill $tdur $ttf;
+  .socials__link:hover &,
+  .socials__link:focus & {
+    fill: $contrast-white-color;
+  }
+}
+
+
+// .socials__link--company {
+//   @extend .socials__link;
+//   background-color: $bg-color-icon;
+//   transition: background-color $tdur $ttf;
+//   &:hover, &:focus {
+//     background-color: $accent-color;
+//   }
+// }
+// .socials__icon--company {
+//   fill: $contrast-white-color;
+// }
+
+
+// }

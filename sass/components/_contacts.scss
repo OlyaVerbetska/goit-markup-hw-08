@@ -1,0 +1,28 @@
+// .contacts {
+//   margin-left: auto;
+//   align-items: center;
+// }
+// .contacts__item:not(:last-child) {
+//   margin-right: 50px;
+// }
+
+// .contacts__link {
+//   color: $text-color;
+//   align-items: center;
+//   transition: color $tdur $ttf;
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }
+// .contacts__icon {
+//   fill: $text-color;
+
+//   display: inline-block;
+//   margin-right: 10px;
+//   transition: fill $tdur $ttf;
+
+//   .contacts__link:hover & {
+//     fill: $accent-color;
+//   }
+// }

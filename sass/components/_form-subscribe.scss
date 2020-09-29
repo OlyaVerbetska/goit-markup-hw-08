@@ -1,0 +1,38 @@
+// .form-subscribe {
+//   margin: 12px 0 auto auto;
+//   align-items: flex-end;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   flex-basis: 570px;
+ 
+// }
+
+// .form-subscribe__input {
+//   display: inline-block;
+//   margin: 0 12px 0 0;
+//   padding: 15px 16px;
+//   width: 358px;
+
+//   border: 1px solid rgba(255, 255, 255, 0.3);
+//   border-radius: 4px;
+//   background-color: transparent;
+
+//   @include font(400, 16px, 0.03em, 1);
+
+//   color: $contrast-white-color;
+
+//   &::placeholder {
+//     @include font(400, 16px, 0.03em, 1.25);
+
+//     color: $contrast-text-color;
+//   }
+//   &:not(:placeholder-shown) {
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     outline: transparent;
+//   }
+
+//   .form-subscribe:focus-within & {
+//     border-color: $contrast-white-color;
+//     outline: $accent-color;
+//   }
+// }
