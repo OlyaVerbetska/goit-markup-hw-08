@@ -4,10 +4,17 @@
   color: $logo;
 }
 .logo__accent {
-      color: $accent-color;
-    }
+  color: $accent-color;
+}
 
+.logo--secondary {
+  display: inline-block;
+  margin: 0 0 20px 0;
 
+  font-family: $font-logo;
+  @include font(700, 24px, 0.03em, 1.17);
+  color: $contrast-white-color;
+}
 
 // .logo--primary {
 //   display: inline-block;
@@ -20,7 +27,7 @@
 
 //   color: $logo;
 // }
-// 
+//
 // .logo--secondary {
 //   display: inline-block;
 

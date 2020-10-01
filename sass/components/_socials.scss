@@ -30,17 +30,17 @@
 }
 
 
-// .socials__link--company {
-//   @extend .socials__link;
-//   background-color: $bg-color-icon;
-//   transition: background-color $tdur $ttf;
-//   &:hover, &:focus {
-//     background-color: $accent-color;
-//   }
-// }
-// .socials__icon--company {
-//   fill: $contrast-white-color;
-// }
+.socials__link--company {
+  @extend .socials__link;
+  background-color: $bg-color-icon;
+  transition: background-color $tdur $ttf;
+  &:hover, &:focus {
+    background-color: $accent-color;
+  }
+}
+.socials__icon--company {
+  fill: $contrast-white-color;
+}
 
 
 // }

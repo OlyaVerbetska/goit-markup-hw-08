@@ -27,20 +27,25 @@
 //   }
 // }
 
-// .button--subscribe {
-//   @extend .button;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 0;
+.button--subscribe {
+  @extend .button;
+  padding: 13px 29px;
+  position: relative;
+  text-align: left;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  margin: 0;
 
-//   &::after {
-//     display: inline-block;
-//     content: "";
-//     width: 24px;
-//     height: 24px;
-//     margin-left: 10px;
-//     background-image: url(../images/icon-send.svg);
-//     background-position: center;
-//   }
-// }
+  &::after {
+    position: absolute;
+    right:28px;
+    top:13px;
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url(../images/icon-send.svg);
+    background-position: center;
+  }
+}

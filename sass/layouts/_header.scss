@@ -1,15 +1,14 @@
 .header-menu {
-    @media screen and (max-width: $tablet) {
-        display:none;
-      }
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
 }
-
 .header {
-    padding: 16px 15px;
-        border-bottom: 1px solid $header-border;
-      }
-
-
+  border-bottom: 1px solid $header-border;
+}
+.header .container {
+  padding: 16px 15px;
+}
 
 // .header {
 //     border-bottom: 1px solid $header-border;
@@ -18,4 +17,3 @@
 //     justify-content: flex-start;
 //     align-items: center;
 //   }
-  
