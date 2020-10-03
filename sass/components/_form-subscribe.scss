@@ -1,5 +1,9 @@
+.form-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .form-subscribe__input {
-  display: inline-block;
   width: 100%;
   padding: 15px 16px;
   margin: 0 0 20px 0;
@@ -25,6 +29,11 @@
   .form-subscribe:focus-within & {
     border-color: $contrast-white-color;
     outline: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    //  display: inline-block;
+    width: 450px;
   }
 }
 

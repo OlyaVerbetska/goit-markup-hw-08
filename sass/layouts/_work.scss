@@ -1,38 +1,41 @@
 .work {
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: $desktop) {
         display:none;}
 }
 
 
-// .work {
-//   padding: 0 0 94px 0;
-// }
-// .work__title {
-//   @extend .title;
-// }
+.work {
 
-// .work__subtitle {
-//   position: absolute;
-//   width: 100%;
-//   left: 0;
-//   bottom: 0;
+  padding: 0 0 94px 0;
+}
+.work__title {
+  @extend .title;
+}
+.work__list {
+display: flex;
+}
+.work__subtitle {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 
-//   @extend .subtitle;
+  @extend .subtitle;
 
-//   padding: 27px 0;
-//   margin: 0;
+  padding: 27px 0;
+  margin: 0;
 
-//   text-align: center;
+  text-align: center;
 
-//   color: $contrast-white-color;
-//   background-color: rgba(47, 48, 58, 0.8);
-// }
+  color: $contrast-white-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}
 
-// .work__item {
-//   position: relative;
-//   flex-basis: calc((100% - 2 * 30px) / 3);
+.work__item {
+  position: relative;
+  flex-basis: calc((100% - 2 * 30px) / 3);
 
-//   &:not(:last-child) {
-//     margin-right: 30px;
-//   }
-// }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}

@@ -1,14 +1,30 @@
-.header-menu {
-  @media screen and (max-width: $tablet) {
-    display: none;
-  }
-}
 .header {
   border-bottom: 1px solid $header-border;
 }
-.header .container {
+.header__container {
+  @extend .container;
   padding: 16px 15px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+       align-items: center;
+       padding: 0 15px;
+  }
+
 }
+
+.header-menu {
+  @media screen and (max-width: #{$tablet - 1}) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: auto;
+  }
+}
+
+
 
 // .header {
 //     border-bottom: 1px solid $header-border;

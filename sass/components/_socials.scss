@@ -1,12 +1,12 @@
 .socials__list {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .socials__item:not(:last-child) {
   margin-right: 10px;
 }
 .socials__link {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -15,7 +15,8 @@
   border-radius: 50%;
   transition: background-color $tdur $ttf;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $accent-color;
   }
 }
@@ -29,18 +30,18 @@
   }
 }
 
-
+// In footer
 .socials__link--company {
   @extend .socials__link;
   background-color: $bg-color-icon;
   transition: background-color $tdur $ttf;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $accent-color;
   }
 }
 .socials__icon--company {
   fill: $contrast-white-color;
 }
-
 
 // }

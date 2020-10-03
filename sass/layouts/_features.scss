@@ -1,17 +1,12 @@
 .features {
   padding: 60px 0;
 }
-.features__subtitle {
-  @extend .subtitle;
-  margin: 0 0 10px 0;
-  text-align: center;
-  color: $title-text-color;
-}
-
-.features__text {
-  @include font(400, 14px, 0.03em, 1.71);
-  margin: 0;
-  color: $text-color;
+.features__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .features__item {
@@ -45,14 +40,44 @@
   &:nth-child(4)::before {
     background-image: url(../images/feature-astronaut.svg);
   }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 3 * 30px) / 4);
+      margin-bottom: 0;
+      &:not(:last-child) {
+  margin-right: 30px;}
+    }
+  }
+}
+.features__subtitle {
+  @extend .subtitle;
+  margin: 0 0 10px 0;
+  text-align: center;
+  color: $title-text-color;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.features__text {
+  @include font(400, 14px, 0.03em, 1.71);
+  margin: 0;
+  color: $text-color;
 }
 
 // .features__item {
 //   flex-basis: calc((100% - 3 * 30px) / 4);
 //   text-align: left;
 
-// &:not(:last-child) {
-//   margin-right: 30px;}
+
 
 // .features__text {
 //   margin: 0;

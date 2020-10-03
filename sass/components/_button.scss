@@ -12,21 +12,6 @@
   color: $contrast-white-color;
   background-color: $accent-color;
 }
-
-
-// .button {
-//   
-//   
-
-//   
-//   &:hover,
-//   &:focus,
-//   &:active {
-//     cursor: pointer;
-//     outline-color: $accent-color;
-//   }
-// }
-
 .button--subscribe {
   @extend .button;
   padding: 13px 29px;
@@ -49,3 +34,18 @@
     background-position: center;
   }
 }
+
+// .button {
+//   
+//   
+
+//   
+//   &:hover,
+//   &:focus,
+//   &:active {
+//     cursor: pointer;
+//     outline-color: $accent-color;
+//   }
+// }
+
+

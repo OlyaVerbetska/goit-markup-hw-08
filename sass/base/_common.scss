@@ -1,6 +1,6 @@
 body {
   font-family: $font-main;
-  // @include font();
+  @include font();
 }
 // section {
 //   padding: 94px 0;
@@ -39,13 +39,13 @@ img {
 // .link {
 //   @include font(500, 14px, 0.02em, 1.14);
 // }
-// .title {
-//   @include font(700, 36px, 0.03em, 1.17);
-//   margin: 0 0 50px 0;
-//   text-align: center;
+.title {
+  @include font(700, 36px, 0.03em, 1.17);
+  margin: 0 0 50px 0;
+  text-align: center;
 
-//   color: $title-text-color;
-// }
+  color: $title-text-color;
+}
 .subtitle {
   @include font(700, 14px, 0.03em, 1.14);
   text-transform: uppercase;

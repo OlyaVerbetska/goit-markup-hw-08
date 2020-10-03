@@ -16,50 +16,50 @@
   <body>
     <!--Header-->
     <header class="header">
-      <div class="container flexbox">
+      <div class="header__container flexbox">
         <a class="logo--primary" href="./index.html"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
-          <div class="header-menu">     
-        <nav class="site-nav flexbox">
-          
-          <ul class="site-nav__list list flexbox">
-            <li class="site-nav__item">
-              <a class="site-nav__link link current" href="">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link link" href="./portfolio.html"
-                >Портфолио</a
+          ><span class="logo__accent">Web</span>Studio</a
+        >
+        <div class="header-menu">
+          <nav class="site-nav flexbox">
+            <ul class="site-nav__list list flexbox">
+              <li class="site-nav__item">
+                <a class="site-nav__link link current" href="">Студия</a>
+              </li>
+
+              <li class="site-nav__item">
+                <a class="site-nav__link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts__list list flexbox">
+            <li class="contacts__item">
+              <a
+                class="contacts__link link flexbox"
+                href="mailto:info@devstudio.com"
               >
+                <svg class="contacts__icon--envelope">
+                  <use href="./images/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link link" href="">Контакты</a>
+            <li class="contacts__item">
+              <a class="contacts__link link flexbox" href="tel:+380991111111">
+                <svg class="contacts__icon--smartphone">
+                  <use href="./images/sprite.svg#icon-smartphone"></use>
+                </svg>
+                +38 099 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="contacts list flexbox">
-          <li class="contacts__item">
-            <a
-              class="contacts__link link flexbox"
-              href="mailto:info@devstudio.com"
-            >
-              <svg class="contacts__icon" width="16px" height="12px">
-                <use href="./images/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link link flexbox" href="tel:+380991111111">
-              <svg class="contacts__icon" width="10px" height="16px">
-                <use href="./images/sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 099 111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
-    </div>  
     </header>
     <main>
       <!--hero-->
@@ -75,7 +75,7 @@
       <section class="features">
         <div class="container">
           <h2 class="features__title visually-hidden">Особенности</h2>
-          <ul class="list flexbox">
+          <ul class="features__list list flexbox">
             <li class="features__item">
               <h3 class="features__subtitle">Внимание к деталям</h3>
               <p class="features__text">
@@ -111,7 +111,7 @@
       <section class="work">
         <div class="container">
           <h2 class="work__title">Чем мы занимаемся</h2>
-          <ul class="list flexbox">
+          <ul class="work__list list flexbox">
             <li class="work__item">
               <a href=""
                 ><img
@@ -549,6 +549,7 @@
     <footer class="footer">
       <div class="container flexbox">
         <!-- Футер контакты -->
+        <div class="footer__nav-social">
         <div class="footer__nav">
           <a class="logo--secondary" href="./index.html"
             ><span class="logo__accent">Web</span>Studio</a
@@ -625,6 +626,8 @@
             </li>
           </ul>
         </div>
+        
+        </div>
         <!-- Футер форма подписки -->
 
         <form class="form-subscribe flexbox">
@@ -640,19 +643,20 @@
 
           <button class="button--subscribe" type="submit">Подписаться</button>
         </form>
+        
       </div>
     </footer>
     <!-- Модалка -->
-    <!-- <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal container">
         <button class="modal__button" data-modal-close>
           <svg width="11px" height="11px">
             <use href="./images/sprite.svg#icon-modal__button"></use>
           </svg>
-        </button> -->
+        </button>
 
         <!-- Форма -->
-        <!-- <form class="form-order">
+        <form class="form-order">
           <p class="form-order__title">
             Оставьте свои данные, мы вам перезвоним
           </p>
@@ -667,7 +671,7 @@
               placeholder=" "
               autocomplete="off"
             />
-            <svg class="form-order__icon" width="18px" height="18px">
+            <svg class="form-order__icon" width="16px" height="16px">
               <use href="./images/sprite.svg#icon-form-name"></use>
             </svg>
           </label>
@@ -682,7 +686,7 @@
               placeholder=" "
               autocomplete="off"
             />
-            <svg class="form-order__icon" width="18px" height="18px">
+            <svg class="form-order__icon" width="16px" height="16px">
               <use href="./images/sprite.svg#icon-form-tel"></use>
             </svg>
           </label>
@@ -697,12 +701,12 @@
               placeholder=" "
               autocomplete="off"
             />
-            <svg class="form-order__icon" width="18px" height="18px">
+            <svg class="form-order__icon" width="16px" height="16px">
               <use href="./images/sprite.svg#icon-form-mail"></use>
             </svg>
           </label>
 
-          <label class="form-order__field">
+          <label class="form-order__field--comment">
             <span class="form-order__label">Комментарий</span>
             <textarea
               class="form-order__comment"
@@ -717,7 +721,7 @@
               type="checkbox"
               name="form-agreement"
             />
-                  <span class="form-order__text"
+            <span class="form-order__text"
               >Соглашаюсь с рассылкой и принимаю&nbsp;<a
                 class="form-order__link"
                 href=""
@@ -727,10 +731,10 @@
           </label>
 
           <button class="button--center">Отправить</button>
-        </form> -->
-      <!-- </div>
-    </div> -->
-    <!-- <script src="./js/modal.js"></script> -->
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
 
