@@ -13,7 +13,7 @@
 }
 
 .header-menu {
-  @media screen and (max-width: #{$tablet - 1}) {
+  @media screen and (max-width: $tablet) {
     display: none;
   }
   @media screen and (min-width: $tablet) {
@@ -23,13 +23,3 @@ align-items: center;
 margin-left: auto;
   }
 }
-
-
-
-// .header {
-//     border-bottom: 1px solid $header-border;
-//   }
-//   .header .container {
-//     justify-content: flex-start;
-//     align-items: center;
-//   }

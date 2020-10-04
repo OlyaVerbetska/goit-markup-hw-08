@@ -2,10 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (min-width: $desktop) {
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-basis: 570px;
+    margin-left: auto;
+  }
 }
 .form-subscribe__input {
   width: 100%;
-  padding: 15px 16px;
+  padding: 16px 15px;
   margin: 0 0 20px 0;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -34,6 +42,11 @@
   @media screen and (min-width: $tablet) {
     //  display: inline-block;
     width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    //  display: inline-block;
+    width: 358px;
+    margin: 0 12px 0 0;
   }
 }
 

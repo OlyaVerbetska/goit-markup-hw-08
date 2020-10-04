@@ -4,9 +4,18 @@
 }
 .footer .container {
   text-align: center;
+  @media screen and (min-width: $desktop) {
+display: flex;
+
+  }
+
 }
 .footer__nav {
   margin: 0 0 60px 0;
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+      margin: 0 70px 0 0;
+    }
 }
 .address__post {
   display: inline-block;
@@ -32,6 +41,10 @@
 }
 .footer__social {
   margin: 0 0 60px 0;
+   @media screen and (min-width: $desktop){
+     margin: 0;
+   }
+
 }
 .footer__subtitle {
   @extend .subtitle;
@@ -39,6 +52,12 @@
   margin: 0 0 20px 0;
 
   color: $contrast-white-color;
+  @media screen and (min-width: $desktop) {
+    margin-top: 12px;
+    width: 100%;
+    text-align: left;
+  }
+  
 }
 
 .footer__nav-social {
@@ -46,7 +65,10 @@
     display: flex;
     justify-content: space-between;
     padding: 0 74px 0 61px;
-    //  align-items: center;
+     @media screen and (min-width: $desktop) {
+       padding:0;
+     }
+    
   }
 }
 

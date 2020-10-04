@@ -17,49 +17,46 @@
     <header class="header">
       <div class="header__container flexbox">
         <a class="logo--primary" href="./index.html"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
-          <div class="header-menu">     
-        <nav class="site-nav flexbox">
-          
-          <ul class="site-nav__list list flexbox">
-            <li class="site-nav__item">
-              <a class="site-nav__link link " href="./index.html">Студия</a>
-            </li>
-           
-            <li class="site-nav__item">
-              <a class="site-nav__link link current" href=""
-                >Портфолио</a
+          ><span class="logo__accent">Web</span>Studio</a
+        >
+        <div class="header-menu">
+          <nav class="site-nav flexbox">
+            <ul class="site-nav__list list flexbox">
+              <li class="site-nav__item">
+                <a class="site-nav__link link" href="./index.html">Студия</a>
+              </li>
+
+              <li class="site-nav__item">
+                <a class="site-nav__link link current" href="">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts list flexbox">
+            <li class="contacts__item">
+              <a
+                class="contacts__link link flexbox"
+                href="mailto:info@devstudio.com"
               >
+                <svg class="contacts__icon--envelope">
+                  <use href="./images/sprite.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link link" href="">Контакты</a>
+            <li class="contacts__item">
+              <a class="contacts__link link flexbox" href="tel:+380991111111">
+                <svg class="contacts__icon--smartphone">
+                  <use href="./images/sprite.svg#icon-smartphone"></use>
+                </svg>
+                +38 099 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <ul class="contacts list flexbox">
-          <li class="contacts__item">
-            <a
-              class="contacts__link link flexbox"
-              href="mailto:info@devstudio.com"
-            >
-              <svg class="contacts__icon--envelope">
-                <use href="./images/sprite.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link link flexbox" href="tel:+380991111111">
-              <svg class="contacts__icon--smartphone" >
-                <use href="./images/sprite.svg#icon-smartphone"></use>
-              </svg>
-              +38 099 111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
-    </div>  
     </header>
 
     <!-- Портфолио -->
@@ -110,11 +107,34 @@
                       сервера конкурентов.
                     </p>
                   </div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-1.jpg    1x,
+                        ./images/portfolio-1@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-1.jpg    1x,
+                        ./images/tablet/portfolio-1@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-1.jpg    1x,
+                        ./images/mobile/portfolio-1@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
 
-                  <img
-                    src="./images/portfolio-1.jpg"
-                    alt="Веб сайт Tехнокряк"
-                  />
+                    <img
+                      src="./images/portfolio-1.jpg"
+                      alt="Веб сайт Tехнокряк"
+                    />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">Технокряк</h2>
@@ -134,10 +154,33 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio-2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-2.jpg    1x,
+                        ./images/portfolio-2@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-2.jpg    1x,
+                        ./images/tablet/portfolio-2@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-2.jpg    1x,
+                        ./images/mobile/portfolio-2@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-2.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">
@@ -159,7 +202,33 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img src="./images/portfolio-3.jpg" alt="Ресторан Seafood" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-2.jpg    1x,
+                        ./images/portfolio-2@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-3.jpg    1x,
+                        ./images/tablet/portfolio-3@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-3.jpg    1x,
+                        ./images/mobile/portfolio-3@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-3.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">Ресторан Seafood</h2>
@@ -179,7 +248,30 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img src="./images/portfolio-4.jpg" alt="Проект Prime" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-4.jpg    1x,
+                        ./images/portfolio-4@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-4.jpg    1x,
+                        ./images/tablet/portfolio-4@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-4.jpg    1x,
+                        ./images/mobile/portfolio-4@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfolio-4.jpg" alt="Проект Prime" />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">Проект Prime</h2>

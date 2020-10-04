@@ -2,59 +2,58 @@
   margin-right: 0;
 }
 .contacts__list {
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     display: flex;
+    align-items: center;
   }
 }
 .contacts__item {
-    @include font(500, 12px, 0.02em, 1.17);
-
-      @media screen and (min-width: $desktop){
+  @include font(500, 12px, 0.02em, 1.17);
+  @media screen and (min-width: $tablet) {
     &:not(:last-child) {
-  margin-right: 50px;
-  
-}
-}
-.contacts__link {
-  display: block;
-  
-  color: $text-color;
-  align-items: center;
-  transition: color $tdur $ttf;
-  &:hover,
-  &:focus {
-    color: $accent-color;
+      margin-bottom: 10px;
+    }
   }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin: 0 50px 0 0;
+    }
+  }
+  .contacts__link {
+    display: block;
 
-
+    color: $text-color;
+    align-items: center;
+    transition: color $tdur $ttf;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      text-align: center;
+    }
   }
 }
 .contacts__icon {
   fill: $text-color;
 
-  display: inline-block;
+  display: block;
   margin-right: 8px;
   transition: fill $tdur $ttf;
-  &--envelope {
-    width: 14px;
-    height: 10px;
-  }
-  &--smartphone {
-    width: 10px;
-    height: 14px;
-  }
-
-  .contacts__link:hover &--envelope,
-  .contacts__link:hover &--smartphone {
+  .contacts__link:hover &,
+  .contacts__link:hover & {
     fill: $accent-color;
   }
-
 }
 
-// .contacts {
-//   margin-left: auto;
-//   align-items: center;
-// }
-// .contacts__item:not(:last-child) {
-//   margin-right: 50px;
-// }
+.contacts__icon--envelope {
+  @extend .contacts__icon;
+  width: 14px;
+  height: 10px;
+}
+.contacts__icon--smartphone {
+  @extend .contacts__icon;
+  width: 10px;
+  height: 14px;
+}
