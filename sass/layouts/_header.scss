@@ -1,25 +1,170 @@
 .header {
   border-bottom: 1px solid $header-border;
+  position: relative;
 }
 .header__container {
   @extend .container;
   padding: 16px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 15px;
+  }
+}
+.header-menu {
+  display: none;
+  
+  @media screen and (max-width: #{$tablet - 1}){
+  position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    }
+
   @media screen and (min-width: $tablet) {
     display: flex;
-       align-items: center;
-       padding: 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
   }
 
+  &.is-open {
+    display: block;
+    
+  }
 }
 
-.header-menu {
-  @media screen and (max-width: $tablet) {
+.menu-button {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+
+  & .icon-close-burger {
     display: none;
   }
-  @media screen and (min-width: $tablet) {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-left: auto;
+  &.is-open .icon-close-burger {
+    display: block;
   }
+
+  & .icon-menu-burger {
+    display: block;
+  }
+  &.is-open .icon-menu-burger {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.site-nav__list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 305px;
+  }
+}
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav__link {
+  display: inline-block;
+  padding: 32px 0;
+  @include font(500, 14px, 0.02em 1.14);
+  color: $title-text-color;
+  transition: color $tdur $ttf;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.current {
+  position: relative;
+  color: $accent-color;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    background-color: $accent-color;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+  }
+}
+.contacts {
+  margin-right: 0;
+}
+.contacts__list {
+  display: inline-block;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+.contacts__item {
+  @include font(500, 12px, 0.02em, 1.17);
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin: 0 50px 0 0;
+    }
+  }
+  .contacts__link {
+    display: block;
+
+    color: $text-color;
+    align-items: center;
+    transition: color $tdur $ttf;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      text-align: center;
+    }
+  }
+}
+.contacts__icon {
+  fill: $text-color;
+
+  display: inline-block;
+  margin-right: 8px;
+  transition: fill $tdur $ttf;
+  .contacts__link:hover &,
+  .contacts__link:hover & {
+    fill: $accent-color;
+  }
+}
+
+.contacts__icon--envelope {
+  @extend .contacts__icon;
+  width: 14px;
+  height: 10px;
+}
+.contacts__icon--smartphone {
+  @extend .contacts__icon;
+  width: 10px;
+  height: 14px;
 }

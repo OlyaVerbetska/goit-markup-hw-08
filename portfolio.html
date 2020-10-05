@@ -14,50 +14,53 @@
   <body>
     <!--Header-->
 
-    <header class="header">
-      <div class="header__container flexbox">
-        <a class="logo--primary" href="./index.html"
-          ><span class="logo__accent">Web</span>Studio</a
-        >
-        <div class="header-menu">
-          <nav class="site-nav flexbox">
-            <ul class="site-nav__list list flexbox">
-              <li class="site-nav__item">
-                <a class="site-nav__link link" href="./index.html">Студия</a>
-              </li>
-
-              <li class="site-nav__item">
-                <a class="site-nav__link link current" href="">Портфолио</a>
-              </li>
-              <li class="site-nav__item">
-                <a class="site-nav__link link" href="">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <ul class="contacts list flexbox">
-            <li class="contacts__item">
-              <a
-                class="contacts__link link flexbox"
-                href="mailto:info@devstudio.com"
-              >
-                <svg class="contacts__icon--envelope">
-                  <use href="./images/sprite.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com
-              </a>
+  <header class="header">
+    <div class="header__container ">
+      <a class="logo--primary" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
+      <button class="menu-button" type="button" aria-label="Переключатель мобильного меню" aria-expanded="false"
+        aria-controls="header-menu" data-menu-button>
+        <svg width="40px" height="40px">
+          <use class="icon-close-burger" href="./images/sprite.svg#icon-close_burger"></use>
+          <use class="icon-menu-burger" href="./images/sprite.svg#icon-menu_burger"></use>
+        </svg>
+      </button>
+      <div class="header-menu" id="header-menu" data-menu>
+  
+        <nav class="site-nav ">
+          <ul class="site-nav__list list ">
+            <li class="site-nav__item">
+              <a class="site-nav__link link " href="./index.html">Студия</a>
             </li>
-            <li class="contacts__item">
-              <a class="contacts__link link flexbox" href="tel:+380991111111">
-                <svg class="contacts__icon--smartphone">
-                  <use href="./images/sprite.svg#icon-smartphone"></use>
-                </svg>
-                +38 099 111 11 11
-              </a>
+  
+            <li class="site-nav__item">
+              <a class="site-nav__link link current" href="">Портфолио</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link link " href="">Контакты</a>
             </li>
           </ul>
-        </div>
+        </nav>
+        <ul class="contacts__list list ">
+          <li class="contacts__item">
+            <a class="contacts__link link " href="mailto:info@devstudio.com">
+              <svg class="contacts__icon--envelope">
+                <use href="./images/sprite.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link link " href="tel:+380991111111">
+              <svg class="contacts__icon--smartphone">
+                <use href="./images/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +38 099 111 11 11
+            </a>
+          </li>
+        </ul>
       </div>
-    </header>
+    </div>
+  </header>
 
     <!-- Портфолио -->
     <main>
@@ -66,7 +69,7 @@
           <!-- <div class=""> -->
           <h1 class="visually-hidden">Портфолио</h1>
           <!-- Фильтр -->
-          <ul class="filter__list list flexbox">
+          <ul class="filter__list list ">
             <li class="filter__item">
               <button class="filter__button" type="button">Все</button>
             </li>
@@ -92,7 +95,7 @@
 
           <!-- Результаты фильтра -->
 
-          <ul class="gallery__list list flexbox">
+          <ul class="gallery__list list ">
             <li class="gallery__item">
               <a href="">
                 <div class="gallery__thumb">
@@ -205,8 +208,8 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/portfolio-2.jpg    1x,
-                        ./images/portfolio-2@2x.jpg 2x
+                        ./images/portfolio-3.jpg    1x,
+                        ./images/portfolio-3@2x.jpg 2x
                       "
                       media="(min-width: 1200px)"
                     />
@@ -291,7 +294,30 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img src="./images/portfolio-5.jpg" alt="Проект Boxes" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-5.jpg    1x,
+                        ./images/portfolio-5@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-5.jpg    1x,
+                        ./images/tablet/portfolio-5@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-5.jpg    1x,
+                        ./images/mobile/portfolio-5@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfolio-5.jpg" alt="Проект Boxes" />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">Проект Boxes</h2>
@@ -311,10 +337,33 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio-6.jpg"
-                    alt="Inspiration has no Borders"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-6.jpg    1x,
+                        ./images/portfolio-6@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-6.jpg    1x,
+                        ./images/tablet/portfolio-6@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-6.jpg    1x,
+                        ./images/mobile/portfolio-6@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-6.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">Inspiration has no Borders</h2>
@@ -334,10 +383,33 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio-7.jpg"
-                    alt="Издание Limited Edition"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-7.jpg    1x,
+                        ./images/portfolio-7@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-7.jpg    1x,
+                        ./images/tablet/portfolio-7@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-7.jpg    1x,
+                        ./images/mobile/portfolio-7@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-7.jpg"
+                      alt="Издание Limited Edition"
+                    />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">Издание Limited Edition</h2>
@@ -357,7 +429,30 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img src="./images/portfolio-8.jpg" alt="Проект LAB" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-8.jpg    1x,
+                        ./images/portfolio-8@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-8.jpg   1x,
+                        ./images/tablet/portfolio-82x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-8.jpg     1x,
+                        ./images/mobile/portfolio-68@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfolio-8.jpg" alt="Проект LAB" />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">Проект LAB</h2>
@@ -377,7 +472,33 @@
                       конкурентов.
                     </p>
                   </div>
-                  <img src="./images/portfolio-9.jpg" alt="Growing Business" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-9.jpg    1x,
+                        ./images/portfolio-9@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/portfolio-9.jpg    1x,
+                        ./images/tablet/portfolio-9@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/portfolio-9.jpg    1x,
+                        ./images/mobile/portfolio-9@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/portfolio-9.jpg"
+                      alt="Growing Business"
+                    />
+                  </picture>
                 </div>
                 <div class="gallery__name">
                   <h2 class="gallery__title">Growing Business</h2>
@@ -391,7 +512,7 @@
     </main>
     <!--Footer-->
     <footer class="footer">
-      <div class="container flexbox">
+      <div class="container ">
         <!-- Футер контакты -->
         <div class="footer__nav">
           <a class="logo--secondary" href="./index.html"
@@ -412,12 +533,12 @@
         </div>
         <!-- Футер Присоединяйтесь -->
 
-        <div class="footer__social flexbox">
+        <div class="footer__social ">
           <span class="footer__subtitle">присоединяйтесь</span>
-          <ul class="socials__list list flexbox">
+          <ul class="socials__list list ">
             <li class="socials__item">
               <a
-                class="socials__link--company link flexbox"
+                class="socials__link--company link "
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -430,7 +551,7 @@
             </li>
             <li class="socials__item">
               <a
-                class="socials__link--company link flexbox"
+                class="socials__link--company link "
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -443,7 +564,7 @@
             </li>
             <li class="socials__item">
               <a
-                class="socials__link--company link flexbox"
+                class="socials__link--company link "
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -456,7 +577,7 @@
             </li>
             <li class="socials__item">
               <a
-                class="socials__link--company link flexbox"
+                class="socials__link--company link "
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
@@ -471,7 +592,7 @@
         </div>
         <!-- Футер форма подписки -->
 
-        <form class="form-subscribe flexbox">
+        <form class="form-subscribe ">
           <span class="footer__subtitle">Подпишитесь на рассылку</span>
 
           <input

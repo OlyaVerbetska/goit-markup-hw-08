@@ -5,12 +5,17 @@ body {
 // section {
 //   padding: 94px 0;
 // }
+body.modal-open {
+  overflow: hidden;
+}
 a {
   text-decoration: none;
 }
 img {
   display: block;
   margin: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {

@@ -16,13 +16,32 @@
   <body>
     <!--Header-->
     <header class="header">
-      <div class="header__container flexbox">
+      <div class="header__container">
         <a class="logo--primary" href="./index.html"
           ><span class="logo__accent">Web</span>Studio</a
         >
-        <div class="header-menu">
-          <nav class="site-nav flexbox">
-            <ul class="site-nav__list list flexbox">
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="Переключатель мобильного меню"
+          aria-expanded="false"
+          aria-controls="header-menu"
+          data-menu-button
+        >
+          <svg width="40px" height="40px">
+            <use
+              class="icon-close-burger"
+              href="./images/sprite.svg#icon-close_burger"
+            ></use>
+            <use
+              class="icon-menu-burger"
+              href="./images/sprite.svg#icon-menu_burger"
+            ></use>
+          </svg>
+        </button>
+        <div class="header-menu" id="header-menu" data-menu>
+          <nav class="site-nav">
+            <ul class="site-nav__list list">
               <li class="site-nav__item">
                 <a class="site-nav__link link current" href="">Студия</a>
               </li>
@@ -37,12 +56,9 @@
               </li>
             </ul>
           </nav>
-          <ul class="contacts__list list flexbox">
+          <ul class="contacts__list list">
             <li class="contacts__item">
-              <a
-                class="contacts__link link flexbox"
-                href="mailto:info@devstudio.com"
-              >
+              <a class="contacts__link link" href="mailto:info@devstudio.com">
                 <svg class="contacts__icon--envelope">
                   <use href="./images/sprite.svg#icon-envelope"></use>
                 </svg>
@@ -50,7 +66,7 @@
               </a>
             </li>
             <li class="contacts__item">
-              <a class="contacts__link link flexbox" href="tel:+380991111111">
+              <a class="contacts__link link" href="tel:+380991111111">
                 <svg class="contacts__icon--smartphone">
                   <use href="./images/sprite.svg#icon-smartphone"></use>
                 </svg>
@@ -75,7 +91,7 @@
       <section class="features">
         <div class="container">
           <h2 class="features__title visually-hidden">Особенности</h2>
-          <ul class="features__list list flexbox">
+          <ul class="features__list list">
             <li class="features__item">
               <h3 class="features__subtitle">Внимание к деталям</h3>
               <p class="features__text">
@@ -111,7 +127,7 @@
       <section class="work">
         <div class="container">
           <h2 class="work__title">Чем мы занимаемся</h2>
-          <ul class="work__list list flexbox">
+          <ul class="work__list list">
             <li class="work__item">
               <a href=""
                 ><img
@@ -156,22 +172,41 @@
         <div class="container">
           <!-- first member -->
           <h2 class="team__title">Наша команда</h2>
-          <ul class="team__list list flexbox">
+          <ul class="team__list list">
             <li class="team__item">
               <picture>
-                <source srcset="./images/team1.jpg 1x, ./images/team1@2x.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./images/tablet/team-1.jpg 1x, ./images/tablet/team-1@2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/mobile/team-1.jpg 1x, ./images/mobile/team-1@2x.jpg 2x" media="(max-width: 767px)" />
-                <img src="./images/team1.jpg" alt="Игорь Демьяненко" width="100%" height="auto" >
-            </picture>
+                <source
+                  srcset="./images/team1.jpg 1x, ./images/team1@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team-1.jpg    1x,
+                    ./images/tablet/team-1@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-1.jpg    1x,
+                    ./images/mobile/team-1@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/team1.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450px"
+                />
+              </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Игорь Демьяненко</h3>
                 <p class="team__text">Product Designer</p>
 
-                <ul class="socials__list list flexbox">
+                <ul class="socials__list list">
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -188,7 +223,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -205,7 +240,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -222,7 +257,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -243,19 +278,38 @@
             <!-- second member -->
             <li class="team__item">
               <picture>
-                <source srcset="./images/team2.jpg 1x, ./images/team2@2x.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./images/tablet/team-2.jpg 1x, ./images/tablet/team-2@2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/mobile/team-2.jpg 1x, ./images/mobile/team-2@2x.jpg 2x" media="(max-width: 767px)" />
-                <img src="./images/team2.jpg" alt="Ольга Репина" width="100%" height="auto">
+                <source
+                  srcset="./images/team2.jpg 1x, ./images/team2@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team-2.jpg    1x,
+                    ./images/tablet/team-2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-2.jpg    1x,
+                    ./images/mobile/team-2@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/team2.jpg"
+                  alt="Ольга Репина"
+                  width="450px"
+                />
               </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Ольга Репина</h3>
                 <p class="team__text">Frontend Developer</p>
 
-                <ul class="socials__list list flexbox">
+                <ul class="socials__list list">
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -272,7 +326,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -289,7 +343,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -306,7 +360,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -327,20 +381,39 @@
 
             <!-- third member -->
             <li class="team__item">
-            <picture>
-              <source srcset="./images/team3.jpg 1x, ./images/team3@2x.jpg 2x" media="(min-width: 1200px)" />
-              <source srcset="./images/tablet/team-3.jpg 1x, ./images/tablet/team-3@2x.jpg 2x" media="(min-width: 768px)" />
-              <source srcset="./images/mobile/team-3.jpg 1x, ./images/mobile/team-3@2x.jpg 2x" media="(max-width: 767px)" />
-              <img src="./images/team3.jpg" alt="Николай Тарасов" width="100%" height="auto">
-            </picture>
+              <picture>
+                <source
+                  srcset="./images/team3.jpg 1x, ./images/team3@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team-3.jpg    1x,
+                    ./images/tablet/team-3@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-3.jpg    1x,
+                    ./images/mobile/team-3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/team3.jpg"
+                  alt="Николай Тарасов"
+                  width="450px"
+                />
+              </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Николай Тарасов</h3>
                 <p class="team__text">Marketing</p>
 
-                <ul class="socials__list list flexbox">
+                <ul class="socials__list list">
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -357,7 +430,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -374,7 +447,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -391,7 +464,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -412,19 +485,38 @@
             <!-- fourth member -->
             <li class="team__item">
               <picture>
-                <source srcset="./images/team4.jpg 1x, ./images/team4@2x.jpg 2x" media="(min-width: 1200px)" />
-                <source srcset="./images/tablet/team-4.jpg 1x, ./images/tablet/team-4@2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/mobile/team-4.jpg 1x, ./images/mobile/team-4@2x.jpg 2x" media="(max-width: 767px)" />
-                <img src="./images/team1.jpg" alt="Михаил Ермаков" width="100%" height="auto">
+                <source
+                  srcset="./images/team4.jpg 1x, ./images/team4@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team-4.jpg    1x,
+                    ./images/tablet/team-4@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-4.jpg    1x,
+                    ./images/mobile/team-4@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/team1.jpg"
+                  alt="Михаил Ермаков"
+                  width="450px"
+                />
               </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Михаил Ермаков</h3>
                 <p class="team__text">UI Designer</p>
 
-                <ul class="socials__list list flexbox">
+                <ul class="socials__list list">
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -441,7 +533,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -458,7 +550,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -475,7 +567,7 @@
                   </li>
                   <li class="socials__item">
                     <a
-                      class="socials__link link flexbox"
+                      class="socials__link link"
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
@@ -500,44 +592,44 @@
       <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постоянные клиенты</h2>
-          <ul class="clients__list list flexbox">
+          <ul class="clients__list list">
             <li class="clients__item">
-              <a class="clients__link link flexbox" href="">
+              <a class="clients__link link" href="">
                 <svg class="clients__icon" width="44px" height="49px">
                   <use href="./images/sprite.svg#icon-client-one"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link link flexbox" href="">
+              <a class="clients__link link" href="">
                 <svg class="clients__icon" width="40px" height="52px">
                   <use href="./images/sprite.svg#icon-client-two"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link link flexbox" href="">
+              <a class="clients__link link" href="">
                 <svg class="clients__icon" width="41px" height="43px">
                   <use href="./images/sprite.svg#icon-client-three"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link link flexbox" href="">
+              <a class="clients__link link" href="">
                 <svg class="clients__icon" width="80px" height="42px">
                   <use href="./images/sprite.svg#icon-client-four"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link link flexbox" href="">
+              <a class="clients__link link" href="">
                 <svg class="clients__icon" width="59px" height="47px">
                   <use href="./images/sprite.svg#icon-client-five"></use>
                 </svg>
               </a>
             </li>
             <li class="clients__item">
-              <a class="clients__link link flexbox" href="">
+              <a class="clients__link link" href="">
                 <svg class="clients__icon" width="88px" height="45px">
                   <use href="./images/sprite.svg#icon-client-six"></use>
                 </svg>
@@ -550,7 +642,7 @@
     <!--Footer-->
 
     <footer class="footer">
-      <div class="container flexbox">
+      <div class="container">
         <!-- Футер контакты -->
         <div class="footer__nav-social">
           <div class="footer__nav">
@@ -574,12 +666,12 @@
           </div>
           <!-- Футер Присоединяйтесь -->
 
-          <div class="footer__social flexbox">
+          <div class="footer__social">
             <span class="footer__subtitle">присоединяйтесь</span>
-            <ul class="socials__list list flexbox">
+            <ul class="socials__list list">
               <li class="socials__item">
                 <a
-                  class="socials__link--company link flexbox"
+                  class="socials__link--company link"
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
@@ -596,7 +688,7 @@
               </li>
               <li class="socials__item">
                 <a
-                  class="socials__link--company link flexbox"
+                  class="socials__link--company link"
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
@@ -613,7 +705,7 @@
               </li>
               <li class="socials__item">
                 <a
-                  class="socials__link--company link flexbox"
+                  class="socials__link--company link"
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
@@ -630,7 +722,7 @@
               </li>
               <li class="socials__item">
                 <a
-                  class="socials__link--company link flexbox"
+                  class="socials__link--company link"
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
@@ -650,7 +742,7 @@
         </div>
         <!-- Футер форма подписки -->
 
-        <form class="form-subscribe flexbox">
+        <form class="form-subscribe">
           <span class="footer__subtitle">Подпишитесь на рассылку</span>
 
           <input
@@ -667,7 +759,7 @@
     </footer>
     <!-- Модалка -->
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal container">
+      <div class="modal">
         <button class="modal__button" data-modal-close>
           <svg width="11px" height="11px">
             <use href="./images/sprite.svg#icon-modal__button"></use>
@@ -754,6 +846,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
 

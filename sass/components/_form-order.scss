@@ -1,8 +1,5 @@
 .form-order {
   text-align: center;
-  
-  
-
 }
 .form-order__title {
   margin: 0 0 30px 0;
@@ -142,7 +139,7 @@
   @include font(400, 12px, 0.03em, 1.17);
 
   color: $text-color;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 
   &::before {
@@ -198,9 +195,11 @@
 .button--center {
   @extend .button;
 
-  // position: absolute;
-  // left: 50%;
-  // transform: translateX(-50%);
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 
-  //   margin-top: 30px;
+    margin-top: 30px;
+  }
 }
