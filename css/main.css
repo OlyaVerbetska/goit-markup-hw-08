@@ -578,7 +578,6 @@ h1, h2, h3 {
             align-items: flex-start;
     -ms-flex-preferred-size: 570px;
         flex-basis: 570px;
-    margin-left: auto;
   }
 }
 
@@ -1521,6 +1520,11 @@ h1, h2, h3 {
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .footer__nav-social {
     padding: 0;
+    margin: 0 93px 0 0;
   }
+}
+
+.footer-form {
+  margin-left: auto;
 }
 /*# sourceMappingURL=main.css.map */

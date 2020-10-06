@@ -3,12 +3,12 @@
   flex-direction: column;
   align-items: center;
   @media screen and (min-width: $desktop) {
-    
+  
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     flex-basis: 570px;
-    margin-left: auto;
+    
   }
 }
 .form-subscribe__input {

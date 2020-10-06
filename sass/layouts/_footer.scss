@@ -67,11 +67,14 @@ display: flex;
     padding: 0 74px 0 61px;
      @media screen and (min-width: $desktop) {
        padding:0;
+       margin: 0 93px 0 0;
      }
     
   }
 }
-
+.footer-form {
+  margin-left: auto;
+}
 // .footer .container {
 //   padding: 60px 15px;
 //   align-items: flex-start;
