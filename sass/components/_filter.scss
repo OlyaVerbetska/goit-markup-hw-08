@@ -20,7 +20,7 @@
   display: block;
   padding: 6px 22px;
   border: 0;
-  @include font(500, 16px, 0.03em, 1.62);
+  @include font(500, 16px, 1.62, $ls-main);
   color: $title-text-color;
   background-color: $bg-color-light;
   border-radius: 4px;

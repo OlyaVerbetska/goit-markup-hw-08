@@ -15,15 +15,18 @@
 }
 .header-menu {
   display: none;
-  
-  @media screen and (max-width: #{$tablet - 1}){
-  position: absolute;
+  @media screen and (max-width: 767px) {
+    position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    z-index: 10;
+    background-color: $contrast-white-color;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
     text-align: center;
-    }
+  }
 
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -34,7 +37,6 @@
 
   &.is-open {
     display: block;
-    
   }
 }
 
@@ -65,31 +67,40 @@
 }
 
 .site-nav__list {
+  padding: 40px 0;
   @media screen and (min-width: $tablet) {
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin-right: 84px;
+    margin: 0 84px 0 88px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-right: 305px;
+    margin: 0 305px 0 93px;
   }
 }
 .site-nav__item:not(:last-child) {
-  margin-right: 50px;
+  margin: 0;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0 50px 0 0;
+  }
 }
 
 .site-nav__link {
   display: inline-block;
   padding: 32px 0;
-  @include font(500, 14px, 0.02em 1.14);
+  @include font(500, $fs-main, $lh-main, 0.02em);
   color: $title-text-color;
   transition: color $tdur $ttf;
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 20px 0;
+    @include font(500, 18px, 1.17, 0.02em);
   }
 }
 .current {
@@ -109,17 +120,26 @@
   }
 }
 .contacts {
+  @media screen and (max-width: 767px) {
+    padding: 0 0 60px 0;
+  }
   margin-right: 0;
 }
 .contacts__list {
   display: inline-block;
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
   }
 }
 .contacts__item {
-  @include font(500, 12px, 0.02em, 1.17);
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
   @media screen and (min-width: $tablet) {
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -127,12 +147,12 @@
   }
   @media screen and (min-width: $desktop) {
     &:not(:last-child) {
-      margin: 0 50px 0 0;
+      margin: 0 30px 0 0;
     }
   }
   .contacts__link {
     display: block;
-
+    @include font(500, 18px, 1.17, 0.02em);
     color: $text-color;
     align-items: center;
     transition: color $tdur $ttf;
@@ -143,12 +163,15 @@
     @media screen and (min-width: $tablet) {
       display: flex;
       text-align: center;
+      @include font(500, 12px, 1.17, 0.02em);
+    }
+    @media screen and (min-width: $desktop) {
+      @include font(500, $fs-main, $lh-main, 0.02em);
     }
   }
 }
 .contacts__icon {
   fill: $text-color;
-
   display: inline-block;
   margin-right: 8px;
   transition: fill $tdur $ttf;

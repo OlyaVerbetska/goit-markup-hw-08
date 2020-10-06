@@ -240,48 +240,39 @@
               </a>
             </li>
 
-            <li class="gallery__item">
-              <a href="">
-                <div class="gallery__thumb">
-                  <div class="gallery__description">
-                    <p class="gallery__text">
-                      Технокряк это современная площадка распространения
-                      коронавируса. Компании используют эту платформу для
-                      цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
-                    </p>
-                  </div>
-                  <picture>
-                    <source
-                      srcset="
-                        ./images/portfolio-4.jpg    1x,
-                        ./images/portfolio-4@2x.jpg 2x
-                      "
-                      media="(min-width: 1200px)"
-                    />
-                    <source
-                      srcset="
-                        ./images/tablet/portfolio-4.jpg    1x,
-                        ./images/tablet/portfolio-4@2x.jpg 2x
-                      "
-                      media="(min-width: 768px)"
-                    />
-                    <source
-                      srcset="
-                        ./images/mobile/portfolio-4.jpg    1x,
-                        ./images/mobile/portfolio-4@2x.jpg 2x
-                      "
-                      media="(max-width: 767px)"
-                    />
-                    <img src="./images/portfolio-4.jpg" alt="Проект Prime" />
-                  </picture>
-                </div>
-                <div class="gallery__name">
-                  <h2 class="gallery__title">Проект Prime</h2>
-                  <p class="gallery__subtitle">Маркетинг</p>
-                </div>
-              </a>
-            </li>
+                  <li class="gallery__item">
+                    <a href="">
+                      <div class="gallery__thumb">
+                        <div class="gallery__description">
+                          <p class="gallery__text">
+                            Технокряк это современная площадка распространения
+                            коронавируса. Компании используют эту платформу для
+                            цифрового шпионажа и атак на защищённые сервера
+                            конкурентов.
+                          </p>
+                        </div>
+                        <picture>
+                          <source srcset="
+                                          ./images/portfolio-4.jpg    1x,
+                                          ./images/portfolio-4@2x.jpg 2x
+                                        " media="(min-width: 1200px)" />
+                          <source srcset="
+                                          ./images/tablet/portfolio-4.jpg    1x,
+                                          ./images/tablet/portfolio-4@2x.jpg 2x
+                                        " media="(min-width: 768px)" />
+                          <source srcset="
+                                          ./images/mobile/portfolio-4.jpg    1x,
+                                          ./images/mobile/portfolio-4@2x.jpg 2x
+                                        " media="(max-width: 767px)" />
+                          <img src="./images/portfolio-4.jpg" alt="Проект Prime" />
+                        </picture>
+                      </div>
+                      <div class="gallery__name">
+                        <h2 class="gallery__title">Проект Prime</h2>
+                        <p class="gallery__subtitle">Маркетинг</p>
+                      </div>
+                    </a>
+                  </li>
 
             <li class="gallery__item">
               <a href="">
@@ -512,99 +503,72 @@
     </main>
     <!--Footer-->
     <footer class="footer">
-      <div class="container ">
+      <div class="container">
         <!-- Футер контакты -->
-        <div class="footer__nav">
-          <a class="logo--secondary" href="./index.html"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
-          <!--Контакты-->
-          <address class="address">
-            <span class="address__post"> г. Киев, пр-т Леси Украинки, 26</span>
-            <br />
-            <a class="address__link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-            <br />
-            <a class="address__link" href="tel:+380991111111"
-              >+38 099 111 11 11</a
-            >
-          </address>
-        </div>
-        <!-- Футер Присоединяйтесь -->
-
-        <div class="footer__social ">
-          <span class="footer__subtitle">присоединяйтесь</span>
-          <ul class="socials__list list ">
-            <li class="socials__item">
-              <a
-                class="socials__link--company link "
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ссылка Instagram"
-              >
-                <svg class="socials__icon--company" width="20px" height="20px">
-                  <use href="./images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                class="socials__link--company link "
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ссылка Twitter"
-              >
-                <svg class="socials__icon--company" width="20px" height="20px">
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                class="socials__link--company link "
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ссылка Facebook"
-              >
-                <svg class="socials__icon--company" width="20px" height="20px">
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a
-                class="socials__link--company link "
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="ссылка Linkedin"
-              >
-                <svg class="socials__icon--company" width="20px" height="20px">
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer__nav-social">
+          <div class="footer__nav">
+            <a class="logo--secondary" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
+            <!--Контакты-->
+            <address class="address">
+              <span class="address__post">
+                г. Киев, пр-т Леси Украинки, 26</span>
+              <br />
+              <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <br />
+              <a class="address__link" href="tel:+380991111111">+38 099 111 11 11</a>
+            </address>
+          </div>
+          <!-- Футер Присоединяйтесь -->
+    
+          <div class="footer__social">
+            <span class="footer__subtitle">присоединяйтесь</span>
+            <ul class="socials__list list">
+              <li class="socials__item">
+                <a class="socials__link--company link" href="" target="_blank" rel="noopener noreferrer"
+                  aria-label="ссылка Instagram">
+                  <svg class="socials__icon--company" width="20px" height="20px">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link--company link" href="" target="_blank" rel="noopener noreferrer"
+                  aria-label="ссылка Twitter">
+                  <svg class="socials__icon--company" width="20px" height="20px">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link--company link" href="" target="_blank" rel="noopener noreferrer"
+                  aria-label="ссылка Facebook">
+                  <svg class="socials__icon--company" width="20px" height="20px">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link--company link" href="" target="_blank" rel="noopener noreferrer"
+                  aria-label="ссылка Linkedin">
+                  <svg class="socials__icon--company" width="20px" height="20px">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- Футер форма подписки -->
-
-        <form class="form-subscribe ">
+        <div class="footer-form">
+    
           <span class="footer__subtitle">Подпишитесь на рассылку</span>
-
-          <input
-            class="form-subscribe__input"
-            type="email"
-            name="user-subscribe-mail"
-            placeholder="E-mail"
-            autocomplete="off"
-          />
-
-          <button class="button--subscribe" type="submit">Подписаться</button>
-        </form>
+          <form class="form-subscribe">
+            <input class="form-subscribe__input" type="email" name="user-subscribe-mail" placeholder="E-mail"
+              autocomplete="off" />
+    
+            <button class="button--subscribe" type="submit">Подписаться</button>
+          </form>
+        </div>
       </div>
     </footer>
     <script src="js/menu.js"></script>

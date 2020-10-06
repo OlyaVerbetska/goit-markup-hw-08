@@ -55,10 +55,6 @@
 
 body {
   font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  line-height: 1;
 }
 
 body.modal-open {
@@ -107,21 +103,30 @@ img {
   margin: 0;
 }
 
-.title, .work__title {
+.title, .work__title, .team__title, .clients__title {
   font-weight: 700;
   font-size: 36px;
-  letter-spacing: 0.03em;
   line-height: 1.17;
+  letter-spacing: 0.03em;
   margin: 0 0 50px 0;
   text-align: center;
   color: #212121;
 }
 
+@media screen and (max-width: 768px) {
+  .title, .work__title, .team__title, .clients__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+  }
+}
+
 .subtitle, .features__subtitle, .work__subtitle, .footer__subtitle {
   font-weight: 700;
   font-size: 14px;
+  line-height: 1.143;
   letter-spacing: 0.03em;
-  line-height: 1.14;
   text-transform: uppercase;
   margin: 0;
 }
@@ -142,22 +147,27 @@ img {
   pointer-events: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
-.logo--primary {
+.logo--primary, .logo--secondary {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  letter-spacing: 0.03em;
   line-height: 1.17;
+  letter-spacing: 0.03em;
   color: #000000;
 }
 
-@media screen and (min-width: 768px) {
-  .logo--primary {
-    margin-right: 88px;
+@media screen and (min-width: 1200px) {
+  .logo--primary, .logo--secondary {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -168,19 +178,14 @@ h1, h2, h3 {
 .logo--secondary {
   display: inline-block;
   margin: 0 0 20px 0;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  letter-spacing: 0.03em;
-  line-height: 1.17;
   color: #ffffff;
 }
 
 .button, .button--subscribe, .button--center {
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 0.06em;
   line-height: 1.87;
+  letter-spacing: 0.06em;
   display: inline-block;
   min-width: 200px;
   max-width: 200px;
@@ -336,9 +341,18 @@ h1, h2, h3 {
   margin: 0 0 30px 0;
   font-weight: 700;
   font-size: 20px;
-  letter-spacing: 0.03em;
   line-height: 1.5;
+  letter-spacing: 0.03em;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-order__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 .form-order__field, .form-order__field--comment {
@@ -355,8 +369,8 @@ h1, h2, h3 {
   top: 20px;
   font-weight: 400;
   font-size: 12px;
-  letter-spacing: 0.01em;
-  line-height: 1.17;
+  line-height: 1.25;
+  letter-spacing: 0.01;
   color: #757575;
 }
 
@@ -365,8 +379,8 @@ h1, h2, h3 {
   width: 100%;
   font-weight: 400;
   font-size: 12px;
-  letter-spacing: 0.01em;
   line-height: 1.17;
+  letter-spacing: 0.01;
   padding: 12px 14px 12px 42px;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -415,8 +429,8 @@ h1, h2, h3 {
   border-radius: 4px;
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.03em;
-  line-height: 1.17;
+  line-height: 1.143;
+  letter-spacing: 0.01em;
 }
 
 .form-order__comment:focus {
@@ -427,32 +441,32 @@ h1, h2, h3 {
 .form-order__comment::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.01em;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .form-order__comment:-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.01em;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .form-order__comment::-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.01em;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .form-order__comment::placeholder {
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.01em;
   line-height: 1.14;
+  letter-spacing: 0.03em;
   color: rgba(117, 117, 117, 0.5);
 }
 
@@ -474,10 +488,6 @@ h1, h2, h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: 400;
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  line-height: 1.17;
   color: #757575;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -485,6 +495,22 @@ h1, h2, h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #757575;
+  justify-content: start;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-order__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .form-order__text::before {
@@ -590,40 +616,40 @@ h1, h2, h3 {
   background-color: transparent;
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: #ffffff;
 }
 
 .form-subscribe__input::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .form-subscribe__input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .form-subscribe__input::-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .form-subscribe__input::placeholder {
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.25;
+  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -683,8 +709,8 @@ h1, h2, h3 {
   border: 0;
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.62;
+  letter-spacing: 0.03em;
   color: #212121;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -749,8 +775,8 @@ h1, h2, h3 {
 
 @media screen and (min-width: 1200px) {
   .gallery__item {
-    -ms-flex-preferred-size: calc((100% - 2*30px) / 3);
-        flex-basis: calc((100% - 2*30px) / 3);
+    -ms-flex-preferred-size: calc((100% - 2 * 30px) / 3);
+        flex-basis: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
   }
   .gallery__item:nth-child(3n) {
@@ -792,8 +818,8 @@ h1, h2, h3 {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  letter-spacing: 0.03em;
   line-height: 1.56;
+  letter-spacing: 0.03em;
   color: #ffffff;
   overflow: hidden;
 }
@@ -808,8 +834,8 @@ h1, h2, h3 {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
-  letter-spacing: 0.06em;
   line-height: 2;
+  letter-spacing: 0.06em;
   color: #212121;
 }
 
@@ -817,8 +843,8 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.87;
+  letter-spacing: 0.03em;
   color: #757575;
 }
 
@@ -856,7 +882,10 @@ h1, h2, h3 {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    z-index: 10;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     text-align: center;
   }
 }
@@ -912,8 +941,13 @@ h1, h2, h3 {
   }
 }
 
+.site-nav__list {
+  padding: 40px 0;
+}
+
 @media screen and (min-width: 768px) {
   .site-nav__list {
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -923,18 +957,24 @@ h1, h2, h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 84px;
+    margin: 0 84px 0 88px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .site-nav__list {
-    margin-right: 305px;
+    margin: 0 305px 0 93px;
   }
 }
 
 .site-nav__item:not(:last-child) {
-  margin-right: 50px;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin: 0 50px 0 0;
+  }
 }
 
 .site-nav__link {
@@ -942,8 +982,8 @@ h1, h2, h3 {
   padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
-  letter-spacing: 0.02em 1.14;
-  line-height: 1;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
   color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -951,6 +991,16 @@ h1, h2, h3 {
 
 .site-nav__link:hover, .site-nav__link:focus {
   color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__link {
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
 
 .current {
@@ -973,8 +1023,20 @@ h1, h2, h3 {
   margin-right: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .contacts {
+    padding: 0 0 60px 0;
+  }
+}
+
 .contacts__list {
   display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__list {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -988,11 +1050,8 @@ h1, h2, h3 {
   }
 }
 
-.contacts__item {
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  line-height: 1.17;
+.contacts__item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1003,12 +1062,16 @@ h1, h2, h3 {
 
 @media screen and (min-width: 1200px) {
   .contacts__item:not(:last-child) {
-    margin: 0 50px 0 0;
+    margin: 0 30px 0 0;
   }
 }
 
 .contacts__item .contacts__link {
   display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
   color: #757575;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1027,6 +1090,19 @@ h1, h2, h3 {
     display: -ms-flexbox;
     display: flex;
     text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item .contacts__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -1082,8 +1158,8 @@ h1, h2, h3 {
 .hero__title {
   font-weight: 900;
   font-size: 26px;
-  letter-spacing: 0.06em;
   line-height: 1.62;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin: 0 0 30px 0;
   color: #ffffff;
@@ -1094,8 +1170,8 @@ h1, h2, h3 {
   .hero__title {
     font-weight: 900;
     font-size: 44px;
-    letter-spacing: 0.06em;
     line-height: 1.36;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -1186,8 +1262,8 @@ h1, h2, h3 {
 .features__text {
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.03em;
   line-height: 1.71;
+  letter-spacing: 1.143;
   margin: 0;
   color: #757575;
 }
@@ -1236,10 +1312,6 @@ h1, h2, h3 {
 }
 
 .team__title {
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 0.03em;
-  line-height: 1.17;
   margin: 0 0 30px 0;
   text-align: center;
 }
@@ -1302,8 +1374,8 @@ h1, h2, h3 {
 .team__subtitle {
   font-weight: 500;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.19;
+  letter-spacing: 0.03em;
   margin: 0 0 10px 0;
   text-align: center;
   color: #212121;
@@ -1312,8 +1384,8 @@ h1, h2, h3 {
 .team__text {
   font-weight: 400;
   font-size: 16px;
+  line-height: 1.88;
   letter-spacing: 0.03em;
-  line-height: 1.19;
   text-align: center;
   color: #757575;
   margin: 0 0 16px 0;
@@ -1324,10 +1396,6 @@ h1, h2, h3 {
 }
 
 .clients__title {
-  font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 0.03em;
-  line-height: 1.17;
   margin: 0 0 30px 0;
   text-align: center;
 }
@@ -1455,16 +1523,16 @@ h1, h2, h3 {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.03em;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   color: #ffffff;
 }
 
 .address__link {
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.03em;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   display: inline-block;
   margin-bottom: 9px;
   font-style: normal;

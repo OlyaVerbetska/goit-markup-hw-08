@@ -1,10 +1,10 @@
 .logo--primary {
   font-family: $font-logo;
-  @include font(700, 24px, 0.03em, 1.17);
+  @include font(700, 24px, 1.17, $ls-main);
   color: $logo;
 
-  @media screen and (min-width:$tablet) {
-    margin-right:88px
+  @media screen and (min-width: $desktop) {
+    @include font(700, 26px, 1.192, $ls-main);
   }
 }
 .logo__accent {
@@ -12,33 +12,8 @@
 }
 
 .logo--secondary {
+  @extend .logo--primary;
   display: inline-block;
   margin: 0 0 20px 0;
-
-  font-family: $font-logo;
-  @include font(700, 24px, 0.03em, 1.17);
   color: $contrast-white-color;
 }
-
-// .logo--primary {
-//   display: inline-block;
-
-//   padding: 24px 0 25px 0;
-//   margin-right: 93px;
-
-//   font-family: $font-logo;
-//   @include font (700, 26px, 0.03em, 1.19);
-
-//   color: $logo;
-// }
-//
-// .logo--secondary {
-//   display: inline-block;
-
-//   margin-bottom: 20px;
-
-//   font-family: $font-logo;
-//   @include font (700, 26px, 0.03em, 1.19);
-
-//   color: $contrast-white-color;
-// }

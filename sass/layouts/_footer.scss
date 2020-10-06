@@ -5,27 +5,25 @@
 .footer .container {
   text-align: center;
   @media screen and (min-width: $desktop) {
-display: flex;
-
+    display: flex;
   }
-
 }
 .footer__nav {
   margin: 0 0 60px 0;
-    @media screen and (min-width: $desktop) {
-      text-align: left;
-      margin: 0 70px 0 0;
-    }
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+    margin: 0 70px 0 0;
+  }
 }
 .address__post {
   display: inline-block;
   margin: 0 0 8px 0;
   font-style: normal;
-  @include font(400, 14px, 0.03em, 1.71);
+  @include font($fw-main, $fs-main, 1.71, $ls-main);
   color: $contrast-white-color;
 }
 .address__link {
-  @include font(400, 14px, 0.03em, 1.71);
+  @include font($fw-main, $fs-main, 1.71, $ls-main);
   display: inline-block;
   margin-bottom: 9px;
   font-style: normal;
@@ -41,10 +39,9 @@ display: flex;
 }
 .footer__social {
   margin: 0 0 60px 0;
-   @media screen and (min-width: $desktop){
-     margin: 0;
-   }
-
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+  }
 }
 .footer__subtitle {
   @extend .subtitle;
@@ -57,7 +54,6 @@ display: flex;
     width: 100%;
     text-align: left;
   }
-  
 }
 
 .footer__nav-social {
@@ -65,61 +61,12 @@ display: flex;
     display: flex;
     justify-content: space-between;
     padding: 0 74px 0 61px;
-     @media screen and (min-width: $desktop) {
-       padding:0;
-       margin: 0 93px 0 0;
-     }
-    
+    @media screen and (min-width: $desktop) {
+      padding: 0;
+      margin: 0 93px 0 0;
+    }
   }
 }
 .footer-form {
   margin-left: auto;
 }
-// .footer .container {
-//   padding: 60px 15px;
-//   align-items: flex-start;
-//   justify-content: flex-end;
-// }
-
-// .footer__subtitle {
-//   @extend .subtitle;
-//   // display: block;
-//   margin-bottom: 20px;
-//   color: $contrast-white-color;
-//   width:100%;
-
-// }
-// .footer__social {
-//   flex-direction: column;
-
-//   margin: 12px 93px 0 0;
-// }
-// .footer__nav {
-//   /* width: 250px; */
-//   margin-right: 70px;
-// }
-// .address__post {
-//   display: inline-block;
-//   margin-bottom: 9px;
-
-//   font-style: normal;
-//   @include font(400, 14px, 0.03em, 1.71);
-
-//   color: $contrast-white-color;
-// }
-
-// .address__link {
-//   @include font(400, 14px, 0.03em, 1.71);
-//   display: inline-block;
-//   margin-bottom: 9px;
-//   font-style: normal;
-//   color: $contrast-text-color;
-//   transition: color $tdur $ttf;
-//   &:not(:last-child) {
-//     margin-bottom: 9px;
-//   }
-//   &:hover,
-//   &:focus {
-//     color: $accent-color;
-//   }
-// }
