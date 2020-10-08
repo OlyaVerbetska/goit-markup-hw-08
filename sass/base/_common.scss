@@ -1,5 +1,9 @@
 body {
   font-family: $font-main;
+  padding-top: 60px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 80px;
+  }
 }
 
 body.modal-open {

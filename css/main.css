@@ -55,6 +55,13 @@
 
 body {
   font-family: Roboto, sans-serif;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
 }
 
 body.modal-open {
@@ -290,6 +297,7 @@ h3 {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 93px 15px;
   overflow-y: scroll;
+  overflow: auto;
 }
 
 .modal {
@@ -850,7 +858,11 @@ h3 {
 
 .header {
   border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header__container {
@@ -864,7 +876,6 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -877,7 +888,7 @@ h3 {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header-menu {
     position: absolute;
     top: 100%;
@@ -1130,7 +1141,7 @@ h3 {
 }
 
 .hero__container {
-  margin: 80px auto 0 auto;
+  margin: 0 auto;
   padding: 118px 60px;
   text-align: center;
   height: 400px;

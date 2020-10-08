@@ -1,6 +1,10 @@
 .header {
   border-bottom: 1px solid $header-border;
-   position: fixed;
+  background-color: $contrast-white-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .header__container {
   @extend .container;
@@ -8,7 +12,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
- position: relative;
 
   @media screen and (min-width: $tablet) {
     padding: 0 15px;
@@ -16,7 +19,7 @@
 }
 .header-menu {
   display: none;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet) {
     position: absolute;
     top: 100%;
     left: 0;
