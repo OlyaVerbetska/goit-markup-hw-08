@@ -850,11 +850,11 @@ h3 {
 
 .header {
   border-bottom: 1px solid #ececec;
-  position: relative;
+  position: fixed;
 }
 
 .header__container {
-  padding: 16px 15px;
+  padding: 10px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -864,6 +864,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
@@ -882,7 +883,7 @@ h3 {
     top: 100%;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
     background-color: #ffffff;
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -995,7 +996,7 @@ h3 {
 
 @media screen and (max-width: 767px) {
   .site-nav__link {
-    padding: 20px 0;
+    padding: 22px 0;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.17;
@@ -1129,7 +1130,7 @@ h3 {
 }
 
 .hero__container {
-  margin: 0 auto;
+  margin: 80px auto 0 auto;
   padding: 118px 60px;
   text-align: center;
   height: 400px;

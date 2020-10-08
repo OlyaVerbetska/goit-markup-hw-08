@@ -1,13 +1,14 @@
 .header {
   border-bottom: 1px solid $header-border;
-  position: relative;
+   position: fixed;
 }
 .header__container {
   @extend .container;
-  padding: 16px 15px;
+  padding: 10px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+ position: relative;
 
   @media screen and (min-width: $tablet) {
     padding: 0 15px;
@@ -20,7 +21,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
     background-color: $contrast-white-color;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
       0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -99,7 +100,7 @@
     color: $accent-color;
   }
   @media screen and (max-width: 767px) {
-    padding: 20px 0;
+    padding: 22px 0;
     @include font(500, 18px, 1.17, 0.02em);
   }
 }

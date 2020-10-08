@@ -82,7 +82,12 @@
       <section class="hero__overlay">
         <div class="hero__container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button" data-modal-open>
+          <button
+            type="button"
+            class="button"
+            aria-label="Заказать услугу"
+            data-modal-open
+          >
             Заказать услугу
           </button>
         </div>
@@ -196,7 +201,7 @@
                 <img
                   src="./images/team1.jpg"
                   alt="Игорь Демьяненко"
-                  width="450px"
+                  width="450"
                 />
               </picture>
               <div class="team__description">
@@ -296,11 +301,7 @@
                   "
                   media="(max-width: 767px)"
                 />
-                <img
-                  src="./images/team2.jpg"
-                  alt="Ольга Репина"
-                  width="450px"
-                />
+                <img src="./images/team2.jpg" alt="Ольга Репина" width="450" />
               </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Ольга Репина</h3>
@@ -403,7 +404,7 @@
                 <img
                   src="./images/team3.jpg"
                   alt="Николай Тарасов"
-                  width="450px"
+                  width="450"
                 />
               </picture>
               <div class="team__description">
@@ -506,7 +507,7 @@
                 <img
                   src="./images/team1.jpg"
                   alt="Михаил Ермаков"
-                  width="450px"
+                  width="450"
                 />
               </picture>
               <div class="team__description">
@@ -742,7 +743,9 @@
         </div>
         <!-- Футер форма подписки -->
         <div class="footer-form">
-          <span class="footer__subtitle">Подпишитесь на рассылку</span>
+          <label class="footer__subtitle" for="subscribe"
+            >Подпишитесь на рассылку</label
+          >
           <form class="form-subscribe">
             <input
               class="form-subscribe__input"
@@ -750,9 +753,16 @@
               name="user-subscribe-mail"
               placeholder="E-mail"
               autocomplete="off"
+              id="subscribe"
             />
 
-            <button class="button--subscribe" type="submit">Подписаться</button>
+            <button
+              class="button--subscribe"
+              type="submit"
+              aria-label="Подписаться"
+            >
+              Подписаться
+            </button>
           </form>
         </div>
       </div>
@@ -760,7 +770,7 @@
     <!-- Модалка -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal__button" data-modal-close>
+        <button class="modal__button" aria-label="Закрыть" data-modal-close>
           <svg width="11px" height="11px">
             <use href="./images/sprite.svg#icon-modal__button"></use>
           </svg>
@@ -841,7 +851,9 @@
             </span>
           </label>
 
-          <button class="button--center">Отправить</button>
+          <button class="button--center" aria-label="Отправить">
+            Отправить
+          </button>
         </form>
       </div>
     </div>
