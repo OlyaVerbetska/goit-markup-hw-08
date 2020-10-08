@@ -20,7 +20,7 @@
   @media screen and (min-width: $tablet) {
     margin: 0 30px 30px 0;
     flex-basis: calc((100% - 30px) / 2);
-    @media screen and (max-width: $desktop) {
+    @media screen and (min-width: $desktop) {
       &:nth-child(2n) {
         margin-right: 0;
       }
