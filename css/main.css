@@ -770,9 +770,6 @@ h3 {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
   }
-}
-
-@media screen and (min-width: 768px) and (min-width: 1200px) {
   .gallery__item:nth-child(2n) {
     margin-right: 0;
   }
@@ -785,6 +782,9 @@ h3 {
   .gallery__item {
     -ms-flex-preferred-size: calc((100% - 2 * 30px) / 3);
         flex-basis: calc((100% - 2 * 30px) / 3);
+    margin-right: 30px;
+  }
+  .gallery__item:nth-child(2n) {
     margin-right: 30px;
   }
   .gallery__item:nth-child(3n) {
@@ -863,6 +863,7 @@ h3 {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .header__container {
