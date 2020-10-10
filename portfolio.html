@@ -625,17 +625,14 @@
         </div>
         <!-- Футер форма подписки -->
         <div class="footer-form">
-          <span class="footer__subtitle">Подпишитесь на рассылку</span>
+          <label class="footer__subtitle" for="subscribe">Подпишитесь на рассылку</label>
           <form class="form-subscribe">
-            <input
-              class="form-subscribe__input"
-              type="email"
-              name="user-subscribe-mail"
-              placeholder="E-mail"
-              autocomplete="off"
-            />
-
-            <button class="button--subscribe" type="submit">Подписаться</button>
+            <input class="form-subscribe__input" type="email" name="user-subscribe-mail" placeholder="E-mail" autocomplete="off"
+              id="subscribe" />
+        
+            <button class="button--subscribe" type="submit" aria-label="Подписаться">
+              Подписаться
+            </button>
           </form>
         </div>
       </div>
