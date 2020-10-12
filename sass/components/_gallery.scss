@@ -8,10 +8,7 @@
 }
 .gallery__item {
   margin: 0 0 30px 0;
-  &:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      1px 4px 6px rgba(0, 0, 0, 0.16);
-  }
+
 
   &:last-child {
     margin: 0;
@@ -20,13 +17,12 @@
   @media screen and (min-width: $tablet) {
     margin: 0 30px 30px 0;
     flex-basis: calc((100% - 30px) / 2);
-    
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
-      &:nth-last-child(-n + 2) {
-        margin-bottom: 0;
-      
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
     }
   }
 
@@ -34,8 +30,8 @@
     flex-basis: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
     &:nth-child(2n) {
-        margin-right: 30px;
-      }
+      margin-right: 30px;
+    }
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -44,6 +40,26 @@
       margin-bottom: 0;
     }
   }
+}
+
+.gallery__link {
+  display: block;
+  // outline:1px solid blue;
+  border: 1px solid $border-cards;
+  border-top: 0;
+  //   &:hover .gallery__thumb, &:focus .gallery__thumb {
+  //   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  //     1px 4px 6px rgba(0, 0, 0, 0.16);
+  // }
+  // &:hover .gallery__name, &:focus .gallery__name {
+  //   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  //     1px 4px 6px rgba(0, 0, 0, 0.16);
+  // }
+  &:hover {box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  
 }
 
 .gallery__thumb {
@@ -62,7 +78,7 @@
   transform: translateY(100%);
   transition: transform $tdur $ttf;
 
-  .gallery__item:hover & {
+  .gallery__link:hover & {
     transform: translateY(0);
   }
 }
@@ -78,17 +94,18 @@
 }
 
 .gallery__name {
-  border: 1px solid $border-cards;
-  border-top: 0;
+  
   padding: 20px 24px;
 }
 .gallery__title {
+ 
   margin-bottom: 4px;
 
   @include font(700, 18px, 2, 0.06em);
   color: $title-text-color;
 }
 .gallery__subtitle {
+  
   margin: 0;
   @include font($fw-main, 16px, 1.87, $ls-main);
   color: $text-color;
